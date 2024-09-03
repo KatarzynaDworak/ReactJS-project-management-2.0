@@ -16,6 +16,7 @@ const INITIAL_KANBAN_BOARD = [
         name: "Task 2",
       },
     ],
+    limit: 5
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const INITIAL_KANBAN_BOARD = [
         name: "Task 3",
       },
     ],
+    limit: 5,
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const INITIAL_KANBAN_BOARD = [
         name: "Task 4",
       },
     ],
+    limit: 5,
   },
 ];
 

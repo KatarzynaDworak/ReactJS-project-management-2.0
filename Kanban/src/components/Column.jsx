@@ -52,9 +52,26 @@ export default function Column({ column, updateColumns }) {
       <h2>{column.name}</h2>
       <ul className="task-list">
         {column.tasks.map((task) => (
-          <li key={task.id}>
-            {task.name}
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+          <li key={task.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <span>{task.name}</span>
+            <button 
+              onClick={() => deleteTask(task.id)} 
+              style={{
+                backgroundColor: '#DC143C',
+                color: 'white',
+                border: 'none',
+                borderRadius: '2px',
+                width: '20px',
+                height: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                marginLeft: '10px'
+              }}
+            >
+              X
+            </button>
           </li>
         ))}
       </ul>
