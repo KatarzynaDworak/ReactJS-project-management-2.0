@@ -10,13 +10,14 @@ const INITIAL_KANBAN_BOARD = [
       {
         id: 1,
         name: "Task 1",
+        user: "Agnieszka",
       },
       {
         id: 2,
         name: "Task 2",
+        user: "Aneta",
       },
     ],
-    limit: 5
   },
   {
     id: 2,
@@ -25,9 +26,9 @@ const INITIAL_KANBAN_BOARD = [
       {
         id: 3,
         name: "Task 3",
+        user: "Marta",
       },
     ],
-    limit: 5,
   },
   {
     id: 3,
@@ -36,9 +37,9 @@ const INITIAL_KANBAN_BOARD = [
       {
         id: 4,
         name: "Task 4",
+        user: "Anna",
       },
     ],
-    limit: 5,
   },
 ];
 
