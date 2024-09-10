@@ -70,7 +70,7 @@ export default function Column({ column, updateColumns }) {
               <li
                 ref={provided.innerRef}
                 {...provided.draggableProps}
-                {...provided.dragHandleProps} // Dodane w odpowiednim miejscu
+                {...provided.dragHandleProps} 
                 style={{
                   ...provided.draggableProps.style,
                   display: 'flex',
@@ -80,7 +80,7 @@ export default function Column({ column, updateColumns }) {
                   margin: '4px 0',
                   backgroundColor: '#f0f0f0',
                   borderRadius: '4px',
-                  cursor: 'pointer', // Dodaj kursor wskazujący na możliwość przeciągania
+                  cursor: 'pointer', 
                 }}
               >
                 <span>{index + 1} {task.name} - {task.user}</span>
