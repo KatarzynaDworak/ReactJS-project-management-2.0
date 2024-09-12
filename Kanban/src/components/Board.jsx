@@ -1,6 +1,5 @@
 import Column from "./Column";
 import { useLocalStorage } from "../hooks/useStorage";
-import './Board.css';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 const INITIAL_KANBAN_BOARD = [
@@ -34,13 +33,9 @@ export default function Board() {
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
 
-    if (!destination) {
-      return;
-    }
+    if (!destination) return;
 
-    if (destination.droppableId === source.droppableId && destination.index === source.index) {
-      return;
-    }
+    if (destination.droppableId === source.droppableId && destination.index === source.index) return;
 
     const startColumn = columns.find((col) => col.id === source.droppableId);
     const finishColumn = columns.find((col) => col.id === destination.droppableId);
@@ -86,19 +81,19 @@ export default function Board() {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="board">
-        <h1>Kanban</h1>
-        <div className="board-columns">
+      <div className="p-8 bg-gradient-to-r from-blue-100 to-purple-100 font-sans min-h-screen">
+        <h1 className="text-4xl font-extrabold text-center mb-8 text-gray-700">Kanban Board</h1>
+        <div className="flex justify-between gap-8">
           {columns.map((column) => (
             <Droppable key={column.id} droppableId={column.id}>
               {(provided) => (
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
-                  className="column"
+                  className="bg-white rounded-lg shadow-lg p-6 w-full max-w-xs border border-gray-300"
                 >
                   <Column column={column} updateColumns={updateColumns} />
-                  {provided.placeholder} {/* To zapewnia miejsce na przeciąganie */}
+                  {provided.placeholder}
                 </div>
               )}
             </Droppable>
@@ -108,4 +103,3 @@ export default function Board() {
     </DragDropContext>
   );
 }
-
