@@ -35,6 +35,21 @@ export default function Column({ column, updateColumns }) {
     setTaskUser('');
   };
 
+  const deleteTask = (taskId) => {
+    const newColumns = JSON.parse(localStorage.getItem('kanban-board')).map((col) => {
+      if (col.id === column.id) {
+        return {
+          ...col,
+          tasks: col.tasks.filter((task) => task.id !== taskId),
+        };
+      }
+      return col;
+    });
+
+    localStorage.setItem('kanban-board', JSON.stringify(newColumns));
+    updateColumns(newColumns);
+  };
+
   return (
     <div>
       <h2 className="text-xl font-bold text-center mb-4 text-purple-600">{column.name}</h2>
