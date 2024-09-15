@@ -2,10 +2,14 @@
 export default {
   content: [
     './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',  // Dodaj ścieżki do swoich plików
+    './src/**/*.{js,jsx,ts,tsx}', 
   ],
   theme: {
-    extend: {},
+    extend: {
+      color: {
+        "twitter-blue": "#1DA1F2",
+      },
+    },
   },
   plugins: [],
 }
