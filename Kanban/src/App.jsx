@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import { useCounterStore } from './store';
 import Board from './components/Board'
 import './index.css'
 import Login from './components/Login';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Board from './components/Board';
 
 function App() {
-  const [count, setCount] = useState(0)
-
 
   return (
-    <>
-      <Board />
+    <Router>
       <Login />
-    </>
+      <Board />
+    </Router>
   )
 }
 

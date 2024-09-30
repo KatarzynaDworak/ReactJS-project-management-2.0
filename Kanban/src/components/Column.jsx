@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
+import { useKanbanStore } from "../store";
 
-export default function Column({ column, updateColumns }) {
+export default function Column({ column }) {
   const [taskName, setTaskName] = useState("");
   const [taskUser, setTaskUser] = useState('');
+  const addTask = useKanbanStore((state) => state.addTask);
+  const deleteTask = useKanbanStore((state) => state.deleteTask);
   const taskLimit = 5;
 
   const handleSubmit = (e) => {
@@ -22,32 +25,9 @@ export default function Column({ column, updateColumns }) {
       user: taskUser,
     };
 
-    const newColumns = JSON.parse(localStorage.getItem('kanban-board')).map((col) => {
-      if (col.id === column.id) {
-        return { ...col, tasks: [...col.tasks, newTask] };
-      }
-      return col;
-    });
-
-    localStorage.setItem('kanban-board', JSON.stringify(newColumns));
-    updateColumns(newColumns);
+    addTask(column.id, newTask);
     setTaskName('');
     setTaskUser('');
-  };
-
-  const deleteTask = (taskId) => {
-    const newColumns = JSON.parse(localStorage.getItem('kanban-board')).map((col) => {
-      if (col.id === column.id) {
-        return {
-          ...col,
-          tasks: col.tasks.filter((task) => task.id !== taskId),
-        };
-      }
-      return col;
-    });
-
-    localStorage.setItem('kanban-board', JSON.stringify(newColumns));
-    updateColumns(newColumns);
   };
 
   return (
@@ -65,7 +45,7 @@ export default function Column({ column, updateColumns }) {
               >
                 <span>{index + 1} {task.name} - {task.user}</span>
                 <button
-                  onClick={() => deleteTask(task.id)}
+                  onClick={() => deleteTask(column.id, task.id)}
                   className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center"
                 >
                   X
@@ -100,6 +80,3 @@ export default function Column({ column, updateColumns }) {
     </div>
   );
 }
-
-
-
