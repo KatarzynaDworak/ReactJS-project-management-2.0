@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Board from './components/Board';
 import Login from './components/Login';
+import Dashboard from './pages/Dashboard';
 import './index.css';
+import ProtectedRoutes from './utilities/ProtectedRoutes.jsx';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Board />} />
         <Route path="/login" element={<Login />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path='/dashboard' element={<Dashboard />}/>
+        </Route>
       </Routes>
     </Router>
   );
