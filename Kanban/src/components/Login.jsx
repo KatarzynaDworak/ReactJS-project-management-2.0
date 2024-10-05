@@ -1,9 +1,6 @@
 import React from 'react';
 import { useAuthStore } from '../stores/auth';
-// import { signInWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from '../plugins/firebase';
 import { useState } from 'react';
-// import { useKanbanStore } from '../store';
 import { Navigate, useLocation } from 'react-router-dom';
 
 const Login = () => {
@@ -12,21 +9,12 @@ const Login = () => {
     const initiatingLogin = useAuthStore((state) => state.initiatingLogin);
     const location = useLocation();
     const from = location.state?.from || '/';
-    // const updateLogin = useAuthStore((store) => store.updateLogin);
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
  
     const handleLogin = async (e) => {
         e.preventDefault();
         login(email, password);
-
-        // try {
-        //     const userLogin = await signInWithEmailAndPassword(auth, login, password);
-        //     console.log("Zalogowano: " + userLogin.user);
-        //     updateError('');
-        // } catch (error) {
-        //     updateError("Błąd logowania:" + error.message )
-        // }
 
     }
     return user ? <Navigate to={from} /> : initiatingLogin ? <div></div> :(

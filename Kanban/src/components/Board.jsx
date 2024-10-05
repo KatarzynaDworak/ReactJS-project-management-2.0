@@ -1,10 +1,10 @@
 import Column from "./Column";
-import { useKanbanStore } from "../store";
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { useAuthStore } from "../stores/auth";
 
 export default function Board() {
-  const columns = useKanbanStore((store) => store.columns);
-  const onDragEnd = useKanbanStore((store) => store.onDragEnd);
+  const columns = useAuthStore((store) => store.columns);
+  const onDragEnd = useAuthStore((store) => store.onDragEnd);
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>

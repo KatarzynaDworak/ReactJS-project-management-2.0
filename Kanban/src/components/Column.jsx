@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { useKanbanStore } from "../store";
+import { useAuthStore } from '../stores/auth';
 
 export default function Column({ column }) {
   const [taskName, setTaskName] = useState("");
   const [taskUser, setTaskUser] = useState('');
-  const addTask = useKanbanStore((state) => state.addTask);
-  const deleteTask = useKanbanStore((state) => state.deleteTask);
+  const addTask = useAuthStore((state) => state.addTask);
+  const deleteTask = useAuthStore((state) => state.deleteTask);
   const taskLimit = 5;
 
   const handleSubmit = (e) => {
