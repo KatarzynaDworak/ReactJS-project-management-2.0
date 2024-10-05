@@ -4,8 +4,23 @@ import Login from './components/Login';
 import Dashboard from './pages/Dashboard';
 import './index.css';
 import ProtectedRoutes from './utilities/ProtectedRoutes.jsx';
+import { useAuthStore } from './stores/auth.js';
+import { useEffect } from 'react';
 
 function App() {
+
+  const logout = useAuthStore((state) => state.logout);
+  const user = useAuthStore((state) => state.user);
+  const initLogin = useAuthStore((state) => state.initLogin);
+
+  setTimeout(() => {
+    console.log('user', user);
+  }, 1000);
+
+  useEffect(() => {
+    initLogin();
+  }, [initLogin]);
+
   return (
     <Router>
       <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
@@ -14,7 +29,9 @@ function App() {
         </p>
         <nav>
           <Link to="/login" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Login</Link>
+          <Link to="/dashboard" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Dashboard</Link>
         </nav>
+        <button onClick={logout}>Log out</button>
       </div>
 
       <Routes>

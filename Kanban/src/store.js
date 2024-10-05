@@ -24,7 +24,7 @@ const INITIAL_KANBAN_BOARD = [
 // Store Zustand dla zarządzania tablicą kanban
 export const useKanbanStore = create((set) => ({
   columns: JSON.parse(localStorage.getItem('kanban-board')) || INITIAL_KANBAN_BOARD,
-  
+
   updateColumns: (newColumns) => {
     localStorage.setItem('kanban-board', JSON.stringify(newColumns));
     set({ columns: newColumns });
