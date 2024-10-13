@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Board from './components/Board';
+import MainBoard from './pages/MainBoard.jsx';
 import Login from './components/Login';
 import Dashboard from './pages/Dashboard';
 import './index.css';
@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Board />} />
+        <Route path="/" element={<MainBoard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route element={<ProtectedRoutes />}>
