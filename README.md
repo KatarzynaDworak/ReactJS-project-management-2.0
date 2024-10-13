@@ -1,6 +1,5 @@
-The code snippets you provided outline a React application that implements a Kanban board with user authentication features using Firebase. Below is an overview and analysis of the different components and their roles in the application.
 
-Overview of the Application Structure
+## Overview of the Application Structure
 Entry Point (main.jsx):
 
 Sets up the React application, rendering the main App component.
