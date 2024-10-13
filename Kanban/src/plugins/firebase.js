@@ -1,18 +1,16 @@
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBpkO6mxgARjmobn1xqiaPFNrLNi9BrcLQ",
-  authDomain: "kanban-project-cbf73.firebaseapp.com",
-  projectId: "kanban-project-cbf73",
-  storageBucket: "kanban-project-cbf73.appspot.com",
-  messagingSenderId: "740125744281",
-  appId: "1:740125744281:web:7f12394701bceb4f71ac08"
+  apiKey: "your-api-key",
+  authDomain: "your-auth-domain",
+  projectId: "your-project-id",
+  storageBucket: "your-storage-bucket",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id"
 };
 
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 
-// Initialize Firebase
-export { auth }
+export { auth };

@@ -6,6 +6,7 @@ import './index.css';
 import ProtectedRoutes from './utilities/ProtectedRoutes.jsx';
 import { useAuthStore } from './stores/auth.js';
 import { useEffect } from 'react';
+import RegisterForm from './components/RegisterForm.jsx';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <nav>
           <Link to="/login" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Login</Link>
           <Link to="/dashboard" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Dashboard</Link>
+          <Link to="/register" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Register</Link>
         </nav>
         <button onClick={logout}>Log out</button>
       </div>
@@ -37,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Board />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<RegisterForm />} />
         <Route element={<ProtectedRoutes />}>
           <Route path='/dashboard' element={<Dashboard />}/>
         </Route>

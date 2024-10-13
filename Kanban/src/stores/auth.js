@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from "firebase/app";
 import { auth } from '../plugins/firebase';
 
 const INITIAL_KANBAN_BOARD = [
