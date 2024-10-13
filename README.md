@@ -1,4 +1,56 @@
+# Thanks for viewing my Project ✨
 
+
+<br />
+
+## :star: **Implementation:**
+The project uses [Vite](https://webpack.js.org/), [npm](https://www.npmjs.com/) and [JSON Server](https://www.npmjs.com/package/json-server/v/0.17.4). To run the app on your machine you should install all dependencies. Then create a localhost port and run your web explorer.
+
+Let's start with installing all dependencies. Move to the app main workspace and run:
+
+            npm i
+
+To create a localhost port you should type:
+
+            npm run dev
+
+<br />
+<br />
+
+## Main goal of my work was to:
+**1. Admin Panel for Excursions**: create a user-friendly admin interface for managing excursion details, including adding, editing, and deleting excursions.
+
+**2. Client-side Excursion Display**: implement a client-side interface for users to view available excursions, add them to their basket, and place orders.
+
+**3. Order Management**: develop functionalities for users to submit their excursion orders and for admins to manage these orders efficiently.
+
+**4. Data Validation and Error Handling**: ensure robust validation for both excursion management and order placement, with clear error messages to guide users.
+<br />
+
+## Solutions provided in the project
+**1. Admin Interface for Excursions:**
+The admin panel allows admins to manage excursions dynamically.
+
+         async function builtExcursionsAdminUi() {
+           document.querySelector(".excursions").innerHTML = "";
+           const excursionsApi = new ExcursionsAPI();
+           const excursions = await excursionsApi.getExcursions();
+           excursions.forEach((excursion) => {
+             const li = document.createElement("li");
+             li.className = "excursions__item";
+             const header = document.createElement("header");
+             const title = document.createElement("h2");
+             title.className = "excursions__title";
+             title.textContent = excursion.Title;
+             const description = document.createElement("p");
+             description.className = "excursions__description";
+             description.textContent = excursion.Description;
+             header.appendChild(title);
+             header.appendChild(description);
+             li.appendChild(header);
+             document.querySelector(".excursions").appendChild(li);
+           });
+         }
 ## Overview of the Application Structure
 Entry Point (main.jsx):
 
