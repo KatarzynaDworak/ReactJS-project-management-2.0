@@ -24,14 +24,14 @@ function App() {
 
   return (
     <Router>
-      <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
+      <div className="flex justify-between items-center p-4 bg-indigo-900 text-white">
         <p>
-          <Link className="text-3xl font-bold" to="/">Kanban Board</Link>
+          <Link className="text-3xl font-bold" to="/">Management Board</Link>
         </p>
         <nav>
-          <Link to="/login" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Login</Link>
-          <Link to="/dashboard" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Dashboard</Link>
-          <Link to="/register" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Register</Link>
+          <Link to="/login" className="bg-white hover:bg-indigo-200 text-indigo-600 font-semibold py-2 px-4 rounded">Login</Link>
+          <Link to="/dashboard" className="bg-white hover:bg-indigo-200 text-indigo-600 font-semibold py-2 px-4 rounded">Dashboard</Link>
+          <Link to="/register" className="bg-white hover:bg-indigo-200 text-indigo-600 font-semibold py-2 px-4 rounded">Register</Link>
         </nav>
         <button onClick={logout}>Log out</button>
       </div>

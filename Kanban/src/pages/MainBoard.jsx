@@ -3,17 +3,6 @@ import React from 'react';
 const MainBoard = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Header Section */}
-      <header className="bg-indigo-600 text-white">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">Management Project</h1>
-            <button className="bg-white text-indigo-600 font-semibold py-2 px-4 rounded">
-              Sign Up for Free
-            </button>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="bg-indigo-700 text-white py-20">
