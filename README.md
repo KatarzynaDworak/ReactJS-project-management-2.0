@@ -83,4 +83,21 @@ Validates task limits per column.
 
 **4. Responsive Design:** With Tailwind CSS, the application has a modern, responsive design that looks good on various devices.
 
+## 🛠️ Languages and Tools used: 
+
+**JavaScript, ReactJS, Zustand, Firebase, Tailwind CSS, CSS, HTML**
+
+<br />
+<br />
+<br />
+<br />
+
+## :blue_heart:  You can find me on: 
+<br />
+
+[<img align="left" alt="Katarzyna Dworak LinkedIn" width="40px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />](https://www.linkedin.com/in/katarzynadworakk/)
+
+<br /> 
+<br />
+
 
