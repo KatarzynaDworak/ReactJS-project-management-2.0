@@ -6,6 +6,8 @@
 ## :star: **Implementation:**
 The project uses [Vite](https://vite.dev/), [npm](https://www.npmjs.com/). To run the app on your machine you should install all dependencies. Then create a localhost port and run your web explorer.
 
+            cd Kanban
+
 Let's start with installing all dependencies. Move to the app main workspace and run:
 
             npm i
