@@ -2,96 +2,70 @@
 
 https://github.com/user-attachments/assets/faf83ac1-8b53-403c-9476-1d48f7bd5953
 
-
-
 <br />
 
-## :star: **Implementation:**
-The project uses [Vite](https://vite.dev/), [npm](https://www.npmjs.com/). To run the app on your machine you should install all dependencies. Then create a localhost port and run your web explorer.
+## Task Management Board📝
+This project is a Kanban Board application built using React, with Firebase for user authentication and Zustand for state management. The application allows users to organize tasks across draggable columns and manage their workflow efficiently.
 
-Let's move to the Kanban folder:
+## 📋 Overview of the Application Structure
+* Authentication: Users can register, log in, and have access to a protected dashboard.
+* Management Board: The main dashboard includes a fully functional Kanban board with draggable columns and tasks.
+* State Management: Zustand is used to manage both authentication state and board data.
+* Firebase: Used for handling user authentication and cloud-based data storage.
+* Responsive Design: Tailwind CSS ensures the app is responsive and visually appealing on various devices.
 
-            cd Kanban
+## 💻 Key Features
+* User Authentication: Secure user registration and login handled by Firebase.
+* Protected Routes: Only authenticated users can access the Kanban dashboard.
+* Draggable Kanban Board: Columns and tasks can be moved with drag-and-drop functionality.
+* Task Management: Users can create, edit, and delete tasks across different columns.
+* State Management: Zustand is employed to handle the application's global state, making it simple and scalable.
+* Responsive UI: Tailwind CSS is used to provide a responsive and clean interface for both desktop and mobile users.
 
-Let's start with installing all dependencies. Move to the app main workspace and run:
+## 🛠️ Implementation
+The application follows a modular and component-based architecture to maintain clarity and reusability. Below is an overview of key components:
+* Entry Point (main.jsx): Initializes the React app and applies global styles with Tailwind CSS.
+* App.jsx: Contains the main structure of the application, including routing between login, registration, and dashboard.
+* Authentication (auth.js): Manages user authentication state using Zustand, with Firebase as the authentication provider.
+* Management Board (Board.jsx): Implements the Kanban board with draggable columns and tasks, using react-beautiful-dnd.
+* Protected Routes (ProtectedRoutes.jsx): Ensures that only authenticated users can access the Kanban dashboard.
+* User Forms (LoginForm.jsx and RegisterForm.jsx): Handles form validation and submission for user login and registration.
+* Firebase Configuration (firebase.js): Configures Firebase for authentication and database interactions.
 
-            npm i
+## 🛠️ Languages and Tools Used
+* React for building the user interface
+* Firebase for authentication and backend services
+* Zustand for lightweight state management
+* Tailwind CSS for styling
+* Vite for fast builds and development
+* HTML & CSS for structure and styling
 
-To create a localhost port you should type:
+## Future Enhancements
+* Integration with Firebase Firestore to store and sync Management board data in real-time
+* Implement task deadlines and notifications
+* Add user-specific settings and task history
+* Allow multiple boards and collaboration features
+
+## How to Run the Project Locally
+1. Clone the repository:
+
+            git clone https://github.com/yourusername/kanban-board.git
+
+2. Navigate to the project directory:
+
+            cd kanban-board
+
+3. Install dependencies:
+
+            npm install
+
+4. Start the development server:
 
             npm run dev
 
-<br />
-<br />
+**Author: Katarzyna Dworak**
+Feel free to connect with me on LinkedIn.
 
-## Overview of the Application Structure
-This Management board application provides a robust structure for managing tasks with user authentication. It leverages modern tools like React, Firebase, and Zustand, demonstrating a solid understanding of both frontend and backend development.
-
-**1. Entry Point (main.jsx):**
-
-Sets up the React application, rendering the main App component.
-Applies global styles from index.css using Tailwind CSS.
-
-**2. Styling (index.css):**
-
-Imports Tailwind CSS styles to use utility-first CSS for styling the application.
-
-**3. Main Application (App.jsx):**
-
-Utilizes React Router for navigation between different routes (e.g., Login, Register, Dashboard).
-Contains a navigation bar with links for the main sections of the app.
-Uses a ProtectedRoutes component to guard access to the Dashboard.
-
-**4. Protected Routes (ProtectedRoutes.jsx):**
-
-Ensures only authenticated users can access certain routes, redirecting unauthenticated users to the login page.
-
-**5. Authentication Store (auth.js):**
-
-Manages user authentication using Zustand for state management.
-Defines actions for logging in, logging out, and initializing the user session via Firebase's authentication services.
-Handles local storage for Kanban board data.
-
-**6. Firebase Configuration (firebase.js):**
-
-Initializes Firebase app and exports the authentication instance for use in the application.
-
-**7. User Registration and Login Forms (RegisterForm.jsx and LoginForm.jsx):**
-
-Components for user input, handling form submission and authentication through Firebase.
-Displays success and error messages based on user actions.
-
-**8. Dashboard and Kanban Board (Dashboard.jsx and Board.jsx):**
-
-Displays the Kanban board with columns and tasks.
-Uses drag-and-drop functionality for task management with react-beautiful-dnd.
-
-**9. Column and Task Management (Column.jsx):**
-
-Renders individual columns and their tasks, allowing users to add and delete tasks.
-Validates task limits per column.
-
-## Key Features
-
-**1. Authentication:** The application uses Firebase for managing user authentication, allowing users to register and log in. It tracks the user's state and provides protection for sensitive routes.
-
-**2. Kanban Board:** The Kanban board is implemented with draggable columns and tasks, which enhances user interaction and usability.
-
-**3. State Management:** Zustand is employed for managing the application's state related to authentication and Kanban board data, making it easy to share state across components.
-
-**4. Responsive Design:** With Tailwind CSS, the application has a modern, responsive design that looks good on various devices.
-
-## 🛠️ Languages and Tools used: 
-
-**JavaScript, ReactJS, Zustand, Firebase, Tailwind CSS, CSS, HTML**
-<br />
-
-## :blue_heart:  You can find me on: 
-<br />
-
-[<img align="left" alt="Katarzyna Dworak LinkedIn" width="40px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />](https://www.linkedin.com/in/katarzynadworakk/)
-
-<br /> 
-<br />
+This project is still in development. Contributions and feedback are welcome!
 
 
