@@ -24,11 +24,9 @@ To create a localhost port you should type:
 <br />
 <br />
 
-## Summary
-This Kanban board application provides a robust structure for managing tasks with user authentication. It leverages modern tools like React, Firebase, and Zustand, demonstrating a solid understanding of both frontend and backend development.
-
-For further details or implementation specifics, you might want to check additional resources on the technologies used, such as the React documentation or the Firebase documentation.
 ## Overview of the Application Structure
+This Management board application provides a robust structure for managing tasks with user authentication. It leverages modern tools like React, Firebase, and Zustand, demonstrating a solid understanding of both frontend and backend development.
+
 **1. Entry Point (main.jsx):**
 
 Sets up the React application, rendering the main App component.
