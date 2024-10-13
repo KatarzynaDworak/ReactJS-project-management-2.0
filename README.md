@@ -4,7 +4,7 @@
 <br />
 
 ## :star: **Implementation:**
-The project uses [Vite](https://webpack.js.org/), [npm](https://www.npmjs.com/) and [JSON Server](https://www.npmjs.com/package/json-server/v/0.17.4). To run the app on your machine you should install all dependencies. Then create a localhost port and run your web explorer.
+The project uses [Vite]([https://vite.dev/]), [npm](https://www.npmjs.com/) and [JSON Server](https://www.npmjs.com/package/json-server/v/0.17.4). To run the app on your machine you should install all dependencies. Then create a localhost port and run your web explorer.
 
 Let's start with installing all dependencies. Move to the app main workspace and run:
 
