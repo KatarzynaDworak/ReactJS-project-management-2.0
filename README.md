@@ -64,7 +64,7 @@ The application follows a modular and component-based architecture to maintain c
             npm run dev
 
 **Author: Katarzyna Dworak**
-Feel free to connect with me on LinkedIn.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/katarzynadworakk/).
 
 This project is still in development. Contributions and feedback are welcome!
 
