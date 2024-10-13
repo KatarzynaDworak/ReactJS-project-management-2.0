@@ -59,10 +59,12 @@ Initializes Firebase app and exports the authentication instance for use in the 
 
 Components for user input, handling form submission and authentication through Firebase.
 Displays success and error messages based on user actions.
+
 **8. Dashboard and Kanban Board (Dashboard.jsx and Board.jsx):**
 
 Displays the Kanban board with columns and tasks.
 Uses drag-and-drop functionality for task management with react-beautiful-dnd.
+
 **9. Column and Task Management (Column.jsx):**
 
 Renders individual columns and their tasks, allowing users to add and delete tasks.
