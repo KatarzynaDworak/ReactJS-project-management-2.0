@@ -1,14 +1,14 @@
 
-import React from 'react';
-import Kanban from './Kanban';
+// import React from 'react';
+// import Kanban from './Kanban';
 
-const Dashboard = () => {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-      <Kanban />
-    </div>
-  );
-};
+// const Dashboard = () => {
+//   return (
+//     <div>
+//       <h2>Dashboard</h2>
+//       <Kanban />
+//     </div>
+//   );
+// };
 
-export default Dashboard;
+// export default Dashboard;
