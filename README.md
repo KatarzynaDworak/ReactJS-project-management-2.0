@@ -86,10 +86,6 @@ Validates task limits per column.
 ## 🛠️ Languages and Tools used: 
 
 **JavaScript, ReactJS, Zustand, Firebase, Tailwind CSS, CSS, HTML**
-
-<br />
-<br />
-<br />
 <br />
 
 ## :blue_heart:  You can find me on: 
